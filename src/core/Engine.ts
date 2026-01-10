@@ -29,6 +29,55 @@ export class Engine {
     if (restartBtn) {
       restartBtn.onclick = () => this.restart();
     }
+
+    this.setupMobileControls();
+  }
+
+  private setupMobileControls() {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    if (isMobile || hasTouch) {
+      const mobileControls = document.getElementById('mobile-controls');
+      const instructions = document.getElementById('instructions');
+      
+      if (mobileControls) {
+        mobileControls.style.display = 'flex';
+      }
+      
+      if (instructions) {
+        instructions.style.display = 'none'; // Hide keyboard instructions on mobile
+      }
+
+      const jumpBtn = document.getElementById('jump-btn');
+      const slideBtn = document.getElementById('slide-btn');
+
+      if (jumpBtn) {
+        jumpBtn.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.input.setKeyPressed('Space', true);
+        });
+        jumpBtn.addEventListener('touchend', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.input.setKeyPressed('Space', false);
+        });
+      }
+
+      if (slideBtn) {
+        slideBtn.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.input.setKeyPressed('ArrowDown', true);
+        });
+        slideBtn.addEventListener('touchend', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.input.setKeyPressed('ArrowDown', false);
+        });
+      }
+    }
   }
 
   start() {

@@ -31,6 +31,14 @@ export class InputHandler {
     });
   }
 
+  setKeyPressed(code: string, isPressed: boolean) {
+    if (isPressed) {
+      this.keys.add(code);
+    } else {
+      this.keys.delete(code);
+    }
+  }
+
   isPressed(code: string): boolean {
     return this.keys.has(code);
   }
