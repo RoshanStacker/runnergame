@@ -15,9 +15,9 @@
     "totalTrials": 80,
     "reversalAfterTrial": 40,
     "interTrialRunDistance": 400,
-    "slowdownDistance": 250,
+    "slowdownDistance": 350,
     "stopDistance": 120,
-    "minSpeed": 1.0,
+    "minSpeed": 0.05,
     "responseTimeoutMs": 10000
   },
   "health": {

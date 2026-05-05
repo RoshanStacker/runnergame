@@ -156,7 +156,7 @@ export class Engine {
       this.config.update({ currentSpeed: baseSpeed * 1.5 });
     } else if (distanceToPlayer <= slowdownDistance) {
       // Normal eased deceleration
-      const t = Math.max(0, distanceToPlayer / slowdownDistance);
+      const t = Math.max(0, (distanceToPlayer-stopDistance+50) / slowdownDistance);
       this.config.update({ currentSpeed: minSpeed + (baseSpeed - minSpeed) * t * t });
     }
 
