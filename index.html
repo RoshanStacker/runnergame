@@ -10,7 +10,6 @@
     <div id="app">
       <canvas id="gameCanvas"></canvas>
       <div id="ui-overlay">
-        <div id="score">Score: 0</div>
         <div id="instructions">
           Jump: Space / Left Click<br>
           Slide: Down Arrow / Right Click
@@ -20,9 +19,10 @@
           <button id="slide-btn" class="control-btn">Slide</button>
         </div>
       </div>
-      <div id="game-over" style="display: none;">
-        <h1>Game Over</h1>
-        <button id="restart-btn">Restart</button>
+      <div id="experiment-complete" style="display: none;">
+        <h1>Experiment Complete</h1>
+        <p>Thank you for participating.</p>
+        <button id="download-btn">Download Data</button>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>

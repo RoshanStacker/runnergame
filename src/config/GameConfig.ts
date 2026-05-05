@@ -5,11 +5,8 @@ export interface GameSettings {
   playerHeight: number;
   playerColor: string;
   playerSlideHeight: number;
-  obstacleSpeed: number;
-  obstacleMinGap: number;
-  obstacleMaxGap: number;
-  obstacleWidth: number;
-  obstacleHeight: number;
+  baseSpeed: number;
+  currentSpeed: number;
   canvasWidth: number;
   canvasHeight: number;
 }
@@ -21,11 +18,8 @@ export const DefaultSettings: GameSettings = {
   playerHeight: 40,
   playerColor: '#646cff',
   playerSlideHeight: 20,
-  obstacleSpeed: 5,
-  obstacleMinGap: 200,
-  obstacleMaxGap: 500,
-  obstacleWidth: 30,
-  obstacleHeight: 60,
+  baseSpeed: 5,
+  currentSpeed: 5,
   canvasWidth: 800,
   canvasHeight: 400,
 };

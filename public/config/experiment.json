@@ -1,0 +1,41 @@
+{
+  "stimulus": {
+    "frequencyRange": [0.02, 0.10],
+    "categoryBoundary": 0.06,
+    "frequencyDistribution": "uniform",
+    "boundaryExclusionZone": 0.005,
+    "orientationVariationRange": [-15, 15],
+    "gratingWidth": 80,
+    "gratingHeight": 80,
+    "jumpRevealHeight": 55,
+    "approachDistance": 300,
+    "contrast": 1.0
+  },
+  "trial": {
+    "totalTrials": 80,
+    "reversalAfterTrial": 40,
+    "interTrialRunDistance": 400,
+    "slowdownDistance": 250,
+    "stopDistance": 120,
+    "minSpeed": 1.0,
+    "responseTimeoutMs": 10000
+  },
+  "health": {
+    "visible": true,
+    "max": 100,
+    "initial": 80,
+    "correctHeal": 5,
+    "incorrectDamage": 10,
+    "regenRate": 0.5,
+    "regenIntervalMs": 1000,
+    "floor": 10
+  },
+  "display": {
+    "showTrialCounter": true,
+    "showFeedbackBorder": true,
+    "showFeedbackIcon": true,
+    "feedbackDurationMs": 1500,
+    "correctColor": "#00ff44",
+    "incorrectColor": "#ff4444"
+  }
+}
