@@ -9,6 +9,10 @@ export class InputHandler {
         this.justPressed.add(e.code);
         this.pressTimestamps.set(e.code, performance.now());
       }
+      if (e.code === 'ArrowUp' && !this.keys.has('Space')) { // ArrowUp is also used for jump
+        this.justPressed.add('Space');
+        this.pressTimestamps.set('Space', performance.now());
+      }
       this.keys.add(e.code);
     });
 
